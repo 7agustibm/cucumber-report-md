@@ -1,0 +1,61 @@
+{
+  "name": "cucumber-report-md",
+  "version": "1.0.0",
+  "description": "Cucumber Report Markdown",
+  "main": "lib/main.js",
+  "bin": {
+    "cucumber-report": "./bin/cucumber-report"
+  },
+  "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts' 'features/**/*.ts'",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run lint && npm run test:unit && npm run cucumber",
+    "test:unit": "jest",
+    "cucumber": "cucumber-js --require-module ts-node/register --require 'features/**/*.ts' -f summary -f json:cucumber_report.json --fail-fast --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7agustibm/cucumber-report-md.git"
+  },
+  "keywords": [],
+  "author": "Agustí Becerra Milà",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/7agustibm/cucumber-report-md/issues"
+  },
+  "homepage": "https://github.com/7agustibm/cucumber-report-md#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/cucumber": "^4.0.4",
+    "@types/jest": "22.2.3",
+    "@types/node": "10.0.4",
+    "@types/rimraf": "^2.0.2",
+    "chai": "^4.1.2",
+    "cucumber": "^4.2.1",
+    "jest": "22.4.3",
+    "rimraf": "^2.6.2",
+    "ts-jest": "22.4.4",
+    "ts-mockito": "^2.3.0",
+    "ts-node": "^6.1.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts?$": "ts-jest",
+      "^.ts?$": "ts-jest"
+    },
+    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testPathIgnorePatterns": [
+      "coverage",
+      "node_modules/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ],
+    "collectCoverage": true
+  }
+}

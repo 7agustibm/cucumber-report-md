@@ -1,0 +1,1 @@
+{"version":3,"file":"GenerateWiki.d.ts","sourceRoot":"","sources":["../../src/actions/GenerateWiki.ts"],"names":[],"mappings":"AAAA,OAAO,OAAO,MAAM,mBAAmB,CAAC;AACxC,OAAO,UAAU,MAAM,cAAc,CAAC;AAEtC,MAAM,CAAC,OAAO;IACV,OAAO,CAAC,UAAU,CAAa;gBAEnB,UAAU,EAAE,UAAU;IAIlC,MAAM,CAAC,QAAQ,EAAE,OAAO,EAAE;IAI1B,OAAO,CAAC,iBAAiB;CAG5B"}
